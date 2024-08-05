@@ -34,6 +34,15 @@ return [
                 ],
             ],
         ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+           
+                  
+           
+            ],
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ]
