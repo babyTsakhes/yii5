@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "faf041e2-e063-46a6-a7db-0c5d70db36df",
+		"name": "TestTaskForNewWork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13612204",
+		"_collection_link": "https://red-station-736473.postman.co/workspace/olimp~b94c6ac7-50c8-4eba-92f4-30ba847c7e0a/collection/13612204-faf041e2-e063-46a6-a7db-0c5d70db36df?action=share&source=collection_link&creator=13612204"
+	},
+	"item": [
+		{
+			"name": "all users",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "view user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:21080/user/view?id=2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "21080",
+					"path": [
+						"user",
+						"view"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Ann343543",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "fhfgf@hjgh.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:21080/user/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "21080",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Ann3435434534",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "fhfg111f@hjgh.com545345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:21080/user/update?id=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "21080",
+					"path": [
+						"user",
+						"update"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Ann3435434534",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "fhfg111f@hjgh.com545345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:21080/user/delete?id=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "21080",
+					"path": [
+						"user",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
