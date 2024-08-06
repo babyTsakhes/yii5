@@ -29,12 +29,7 @@ class UserController extends ActiveController
                 'modelClass' => $this->modelClass,
                 'checkAccess' => [$this, 'checkAccess'],
             ],
-            'create' => [
-                'class' => 'yii\rest\CreateAction',
-                'modelClass' => $this->modelClass,
-                'checkAccess' => [$this, 'checkAccess'],
-                'scenario' => $this->createScenario,
-            ],
+         
             'update' => [
                 'class' => 'yii\rest\UpdateAction',
                 'modelClass' => $this->modelClass,
@@ -56,4 +51,26 @@ class UserController extends ActiveController
      * {@inheritdoc}
      */
    
+
+     public function actionCreate(){
+        $model = new User();
+      // 
+        $model->load(Yii::$app->getRequest()->getBodyParams(), '') ;
+        $model->password_hash = password_hash($model->password_hash,PASSWORD_DEFAULT);
+     //   die(var_dump($model->attributes));
+        if($model->save()){
+            return "Success!";
+        }
+     }
+     public function actionAuth($username, $password, $password_hash = "1234"){
+        $user = User::findOne(['username'=>$username]);
+        
+        if(password_verify($password, $user->password_hash ) ){
+            $_SESSION['auth_data'] = [true, ['user_id'=>$user->id, 'username'=>$user->username]];
+            return "Success!";
+        
+     }
+     return false;
+     
+}
 }
