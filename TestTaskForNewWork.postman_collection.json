@@ -16,6 +16,14 @@
 			"response": []
 		},
 		{
+			"name": "auth",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
 			"name": "view user by id",
 			"request": {
 				"method": "GET",
