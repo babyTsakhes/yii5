@@ -5,7 +5,9 @@
 После этого перейдите в папку с проектом и запустите следующие команды
 
 docker-compose run --rm backend composer install
+
 docker-compose run --rm backend php /app/init
+
 docker-compose up -d
 
 
